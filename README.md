@@ -1,2 +1,489 @@
 # radhika-garden
 HEHE 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Jaanu 🌺</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+ background:#10091b;
+ color:#fff0fa;
+ font-family:Poppins,sans-serif;
+ text-align:center;
+ overflow-x:hidden;
+}
+
+section{
+ min-height:100vh;
+ padding:65px 22px;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:center;
+ position:relative;
+}
+
+h1,h2{
+ font-family:'Cormorant Garamond',serif;
+ font-weight:400;
+}
+
+h1{font-size:65px;margin:20px 0}
+h2{font-size:43px;margin:18px 0}
+
+p{
+ color:#dec9e2;
+ font-size:14px;
+ line-height:2;
+ max-width:500px;
+}
+
+.eyebrow{
+ color:#e9a4d0;
+ letter-spacing:4px;
+ font-size:10px;
+ text-transform:uppercase;
+}
+
+button{
+ background:#a34c81;
+ border:1px solid #e2a2ce;
+ border-radius:40px;
+ color:white;
+ padding:14px 25px;
+ margin-top:25px;
+ font-family:inherit;
+ cursor:pointer;
+ font-size:12px;
+}
+
+button:active{transform:scale(.96)}
+
+.hero{
+ background:radial-gradient(circle,#542044,#24102e 50%,#10091b);
+}
+
+.flower-main{
+ font-size:80px;
+ filter:drop-shadow(0 0 22px #ed62ae);
+ animation:bloom 3s infinite alternate;
+}
+
+@keyframes bloom{
+ to{transform:scale(1.12)}
+}
+
+.letter{
+ background:#ffffff09;
+ border:1px solid #bd76a655;
+ border-radius:18px;
+ padding:28px 23px;
+ max-width:520px;
+ margin:25px auto;
+ text-align:left;
+ box-shadow:0 0 40px #a33a6b22;
+}
+
+.letter p{margin-bottom:17px}
+
+.signature{
+ text-align:right;
+ font-family:'Cormorant Garamond',serif;
+ font-size:28px;
+ color:#e8a3d1;
+}
+
+.scrapbook{
+ background:linear-gradient(#160d20,#2b1734);
+}
+
+.photos{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:22px;
+ max-width:450px;
+ width:100%;
+ margin:35px auto;
+}
+
+.polaroid{
+ background:#fff8f0;
+ color:#49334a;
+ padding:9px 9px 20px;
+ box-shadow:0 10px 25px #0007;
+ transform:rotate(3deg);
+}
+
+.polaroid:nth-child(even){transform:rotate(-4deg)}
+
+.polaroid img{
+ width:100%;
+ aspect-ratio:1;
+ object-fit:cover;
+ display:block;
+}
+
+.polaroid p{
+ color:#49334a;
+ font-family:'Cormorant Garamond',serif;
+ font-size:17px;
+ line-height:1.3;
+ margin-top:12px;
+}
+
+.placeholder{
+ width:100%;
+ aspect-ratio:1;
+ background:#e9dce8;
+ color:#754c70;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ font-size:12px;
+}
+
+.garden{
+ background:linear-gradient(#21102d,#10091b);
+}
+
+.flowers{
+ display:grid;
+ grid-template-columns:1fr 1fr;
+ gap:15px;
+ max-width:420px;
+ width:100%;
+ margin:30px auto;
+}
+
+.flower-card{
+ padding:22px 8px;
+ border:1px solid #bd75a355;
+ background:#ffffff09;
+ border-radius:15px;
+}
+
+.flower-card span{
+ font-size:40px;
+ display:block;
+ margin-bottom:10px;
+}
+
+.flower-card small{color:#e5b5d7}
+
+#message{
+ display:none;
+ background:#482544;
+ border:1px solid #d38bb5;
+ border-radius:15px;
+ padding:25px;
+ margin-top:20px;
+ max-width:400px;
+ line-height:2;
+ color:#f5d9ed;
+}
+
+.final{
+ background:radial-gradient(circle,#4a2046,#10091b 75%);
+}
+
+.final h2{font-size:48px}
+
+#musicButton{
+ position:fixed;
+ bottom:18px;
+ right:15px;
+ z-index:10;
+ margin:0;
+ padding:12px 17px;
+ box-shadow:0 5px 20px #0008;
+}
+
+.petal{
+ position:fixed;
+ top:-30px;
+ pointer-events:none;
+ z-index:5;
+ animation:fall linear forwards;
+}
+
+@keyframes fall{
+ to{transform:translateY(110vh) rotate(600deg);opacity:0}
+}
+
+footer{
+ padding:25px;
+ color:#987c9d;
+ font-size:10px;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="music" loop>
+ <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicButton" onclick="toggleMusic()">
+ ♫ Play music
+</button>
+
+<!-- OPENING -->
+
+<section class="hero">
+ <div class="flower-main">🌺</div>
+ <div class="eyebrow">A little world for</div>
+ <h1>My Jaanu</h1>
+ <p>
+ Some flowers take time to bloom.<br>
+ Some apologies take courage to say.
+ </p>
+ <button onclick="startGarden()">
+ Enter your little garden ♡
+ </button>
+</section>
+
+<!-- APOLOGY -->
+
+<section id="apology">
+ <div class="eyebrow">A letter from me</div>
+ <h2>I'm sorry, Jaanu.</h2>
+
+ <div class="letter">
+  <p>Hey Jaanu,</p>
+
+  <p>
+  I know I messed up yesterday. I shouted at you,
+  acted rudely and behaved in a way you didn't deserve.
+  </p>
+
+  <p>
+  You didn't deserve to be spoken to like that.
+  I'm not going to make excuses for my behaviour.
+  </p>
+
+  <p>
+  I should have been more patient, listened to you
+  and handled things differently instead of letting
+  my emotions take over.
+  </p>
+
+  <p>
+  You matter to me, and I genuinely hate knowing
+  that my actions might have hurt you.
+  </p>
+
+  <p>
+  I can't undo yesterday, but I can learn from it.
+  I want my actions to show you that I mean this apology.
+  </p>
+
+  <p>
+  I'm not expecting you to forgive me immediately.
+  I just wanted you to know that I'm truly sorry.
+  </p>
+
+  <div class="signature">Your Joshua ♡</div>
+ </div>
+
+ <button onclick="goTo('scrapbook')">
+ A few little memories ↓
+ </button>
+</section>
+
+<!-- PHOTO GALLERY -->
+
+<section class="scrapbook" id="scrapbook">
+ <div class="eyebrow">Our little memories</div>
+ <h2>Little moments, just us.</h2>
+ <p>
+ Some moments deserve their own little place.
+ </p>
+
+ <div class="photos">
+
+  <div class="polaroid">
+   <img src="photos/photo1.jpg"
+   onerror="this.outerHTML='<div class=placeholder>Add photo1.jpg</div>'">
+   <p>One of my favourite moments ♡</p>
+  </div>
+
+  <div class="polaroid">
+   <img src="photos/photo2.jpg"
+   onerror="this.outerHTML='<div class=placeholder>Add photo2.jpg</div>'">
+   <p>A little memory to keep.</p>
+  </div>
+
+  <div class="polaroid">
+   <img src="photos/photo3.jpg"
+   onerror="this.outerHTML='<div class=placeholder>Add photo3.jpg</div>'">
+   <p>Something worth smiling about.</p>
+  </div>
+
+  <div class="polaroid">
+   <img src="photos/photo4.jpg"
+   onerror="this.outerHTML='<div class=placeholder>Add photo4.jpg</div>'">
+   <p>Here's to more memories.</p>
+  </div>
+
+ </div>
+
+ <button onclick="goTo('garden')">
+ There's more for you 🌺
+ </button>
+</section>
+
+<!-- SPIDER LILY GARDEN -->
+
+<section class="garden" id="garden">
+ <div class="flower-main">🌺</div>
+ <div class="eyebrow">A garden just for you</div>
+ <h2>One flower, one thought.</h2>
+ <p>Tap each flower to discover a little message.</p>
+
+ <div class="flowers">
+
+  <div class="flower-card" onclick="showMessage(0)">
+   <span>🌺</span>
+   <small>A reminder</small>
+  </div>
+
+  <div class="flower-card" onclick="showMessage(1)">
+   <span>🌸</span>
+   <small>Something I mean</small>
+  </div>
+
+  <div class="flower-card" onclick="showMessage(2)">
+   <span>🌺</span>
+   <small>A promise</small>
+  </div>
+
+  <div class="flower-card" onclick="showMessage(3)">
+   <span>🌷</span>
+   <small>One last thing</small>
+  </div>
+
+ </div>
+
+ <div id="message"></div>
+
+ <button onclick="goTo('ending')">
+ One last thing, Jaanu ♡
+ </button>
+</section>
+
+<!-- ENDING -->
+
+<section class="final" id="ending">
+ <div class="flower-main">🌺</div>
+
+ <div class="eyebrow">Before you leave</div>
+
+ <h2>Keep smiling, Jaanu.</h2>
+
+ <p>
+ I hope your days are full of happiness,
+ your heart feels lighter, and you always
+ have reasons to smile.
+ </p>
+
+ <p style="margin-top:25px">
+ No pressure. No expectations.
+ Just a genuine apology from me.
+ </p>
+
+ <h2 style="font-size:38px;margin-top:30px">
+ I'm sorry, Jaanu. ♡
+ </h2>
+
+ <button onclick="showHug()">
+ One last hug? 🫂
+ </button>
+
+ <p id="hug" style="display:none;margin-top:25px;color:#f3b4d9">
+ Sending you the biggest virtual hug.<br>
+ No pressure to send one back. ❤️
+ </p>
+</section>
+
+<footer>
+ Made with love, sincerity and lots of spider lilies. 🌺
+</footer>
+
+<script>
+
+const music=document.getElementById("music");
+
+function toggleMusic(){
+ const button=document.getElementById("musicButton");
+
+ if(music.paused){
+  music.play().then(()=>{
+   button.innerText="Ⅱ Pause music";
+  }).catch(()=>{
+   button.innerText="♫ Tap to play";
+  });
+ }else{
+  music.pause();
+  button.innerText="♫ Play music";
+ }
+}
+
+function startGarden(){
+ music.play().then(()=>{
+  document.getElementById("musicButton").innerText="Ⅱ Pause music";
+ }).catch(()=>{});
+
+ goTo("apology");
+}
+
+function goTo(id){
+ document.getElementById(id).scrollIntoView({
+  behavior:"smooth"
+ });
+}
+
+const messages=[
+ "You deserved patience from me, not anger. ❤️",
+ "Your feelings matter. I should have listened.",
+ "I'll work on handling difficult moments with more care.",
+ "I genuinely hope I can make you smile again. 🌺"
+];
+
+function showMessage(index){
+ const box=document.getElementById("message");
+ box.innerText=messages[index];
+ box.style.display="block";
+}
+
+function showHug(){
+ document.getElementById("hug").style.display="block";
+}
+
+function makePetal(){
+ const petal=document.createElement("div");
+ petal.className="petal";
+ petal.innerText=Math.random()>.5?"🌸":"✿";
+ petal.style.left=Math.random()*100+"vw";
+ petal.style.fontSize=(12+Math.random()*15)+"px";
+ petal.style.animationDuration=(5+Math.random()*7)+"s";
+
+ document.body.appendChild(petal);
+
+ setTimeout(()=>petal.remove(),12000);
+}
+
+setInterval(makePetal,800);
+
+</script>
+
+</body>
+</html>
